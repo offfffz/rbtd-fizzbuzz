@@ -3,20 +3,36 @@ require './fizzbuzz'
 
 RSpec.describe FizzBuzz do
   describe '#check' do
-    it 'returns ["1"] when given [1]' do
-      expect(FizzBuzz.check([1])).to eq(["1"])
+    let(:input) { [] }
+
+    subject { described_class.check(input) }
+
+    context 'when given [1]' do
+      let(:input) { [1] }
+
+      it { is_expected.to eq(['1']) }
+      it { is_expected.to be_an(Array) }
     end
 
-    it 'returns ["Fizz"] when given [3]' do
-      expect(FizzBuzz.check([3])).to eq(["Fizz"])
+    context 'when given [3]' do
+      let(:input) { [3] }
+
+      it { is_expected.to eq(['Fizz']) }
+      it { is_expected.to be_an(Array) }
     end
 
-    it 'returns ["Buzz"] when given [5]' do
-      expect(FizzBuzz.check([5])).to eq(["Buzz"])
+    context 'when given [5]' do
+      let(:input) { [5] }
+
+      it { is_expected.to eq(['Buzz']) }
+      it { is_expected.to be_an(Array) }
     end
 
-    it 'returns ["FizzBuzz"] when given [15]' do
-      expect(FizzBuzz.check([15])).to eq(["FizzBuzz"])
+    context 'when given [15]' do
+      let(:input) { [15] }
+
+      it { is_expected.to eq(['FizzBuzz']) }
+      it { is_expected.to be_an(Array) }
     end
   end
 end
