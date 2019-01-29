@@ -2,13 +2,19 @@ require 'rspec'
 require './fizzbuzz'
 
 RSpec.describe FizzBuzz do
-  it 'returns ["1", "Fizz", "Buzz", "13", "FizzBuzz"] when given [1,3,5,13,15]' do
-    expect(FizzBuzz.check([1,3,5,13,15])).to(
-      eq(["1", "Fizz", "Buzz", "13", "FizzBuzz"])
-    )
+  it 'returns ["1"] when given [1]' do
+    expect(FizzBuzz.check([1])).to eq(["1"])
   end
 
-  it 'returns ["something stupid"] when given [1,2,3,4,5]' do
-    expect(FizzBuzz.check([1,2,3,4,5])).to eq(["something stupid"])
+  it 'returns ["Fizz"] when given [3]' do
+    expect(FizzBuzz.check([3])).to eq(["Fizz"])
+  end
+
+  it 'returns ["Buzz"] when given [5]' do
+    expect(FizzBuzz.check([5])).to eq(["Buzz"])
+  end
+
+  it 'returns ["FizzBuzz"] when given [15]' do
+    expect(FizzBuzz.check([15])).to eq(["FizzBuzz"])
   end
 end
