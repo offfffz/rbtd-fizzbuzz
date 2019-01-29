@@ -2,10 +2,9 @@ require './fizzbuzz'
 
 passes, failed = 0, 0
 
-input = [1,3,5,7,9,11,13,15]
+input = [1,3,5,13,15]
 expected = [
-  "1", "Fizz", "Buzz", "7",
-  "Fizz", "11", "13", "FizzBuzz"
+  "1", "Fizz", "Buzz", "13", "FizzBuzz"
 ]
 
 puts "test with input #{input} gets #{expected}"
